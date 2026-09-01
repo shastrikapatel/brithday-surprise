@@ -1,0 +1,463 @@
+/* ```css */
+/* =========================================
+   PREMIUM BIRTHDAY LOADER
+   Soft White + Pink + Rose Theme
+========================================= */
+
+.loader-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(244, 114, 182, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 35%,
+      rgba(251, 113, 133, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #fffafc 0%,
+      #ffffff 45%,
+      #fff7fa 100%
+    );
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.loader-glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(244, 114, 182, 0.20),
+      rgba(244, 114, 182, 0.07) 45%,
+      transparent 70%
+    );
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+.loader-glow-secondary {
+  width: 300px;
+  height: 300px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(251, 113, 133, 0.18),
+      rgba(251, 113, 133, 0.05) 50%,
+      transparent 72%
+    );
+
+  transform: translate(180px, -160px);
+}
+
+
+/* =========================================
+   LOADER CARD
+========================================= */
+
+.loader-card {
+  position: relative;
+  z-index: 2;
+
+  width: min(90%, 520px);
+
+  padding: 48px 42px;
+
+  text-align: center;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 248, 251, 0.96)
+    );
+
+  border: 1px solid rgba(244, 114, 182, 0.16);
+
+  box-shadow:
+    0 25px 70px rgba(190, 24, 93, 0.10),
+    0 8px 30px rgba(244, 114, 182, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+
+/* =========================================
+   DECORATIVE ICONS
+========================================= */
+
+.loader-icons {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 28px;
+
+  margin-bottom: 22px;
+}
+
+.heart-icon {
+  font-size: 42px;
+
+  color: #f43f6f;
+
+  filter:
+    drop-shadow(0 0 10px rgba(244, 63, 111, 0.35))
+    drop-shadow(0 0 22px rgba(244, 63, 111, 0.18));
+}
+
+.gift-icon {
+  font-size: 42px;
+  margin-top: 80px;
+  color: #ec4899;
+
+  filter:
+    drop-shadow(0 0 10px rgba(236, 72, 153, 0.35))
+    drop-shadow(0 0 22px rgba(236, 72, 153, 0.18));
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.loader-eyebrow {
+  margin: 0 0 12px;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+
+  color: #db2777;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.loader-card h2 {
+  margin: 0;
+
+  font-size: clamp(1.65rem, 4vw, 2.25rem);
+
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+
+  color: #3f172e;
+}
+
+.heading-heart {
+  color: #f43f6f;
+
+  text-shadow:
+    0 0 10px rgba(244, 63, 111, 0.35),
+    0 0 25px rgba(244, 63, 111, 0.15);
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.loader-subtitle {
+  margin: 16px 0 25px;
+
+  font-size: 0.92rem;
+
+  line-height: 1.6;
+
+  color: #9f6b83;
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.loader-stars {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  margin: 10px 0 30px;
+}
+
+.loader-star {
+  display: inline-flex;
+
+  color: #f9a8d4;
+
+  font-size: 10px;
+
+  filter:
+    drop-shadow(0 0 5px rgba(244, 114, 182, 0.5));
+}
+
+
+/* =========================================
+   PROGRESS AREA
+========================================= */
+
+.loader-progress-wrapper {
+  width: 100%;
+
+  margin-top: 5px;
+}
+
+.loader-bar {
+  position: relative;
+
+  width: 100%;
+  height: 9px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #fce7f3;
+
+  border: 1px solid rgba(236, 72, 153, 0.08);
+
+  box-shadow:
+    inset 0 2px 5px rgba(190, 24, 93, 0.06);
+}
+
+.loader-progress {
+  position: relative;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f472b6 0%,
+      #ec4899 40%,
+      #f43f6f 75%,
+      #fb7185 100%
+    );
+
+  box-shadow:
+    0 0 10px rgba(236, 72, 153, 0.35),
+    0 0 22px rgba(244, 114, 182, 0.18);
+}
+
+.loader-progress::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 70px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.75)
+    );
+
+  filter: blur(4px);
+}
+
+
+/* =========================================
+   PROGRESS INFO
+========================================= */
+
+.loader-progress-info {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 12px;
+
+  font-size: 0.76rem;
+
+  color: #b4869d;
+}
+
+.loader-percent {
+  font-weight: 700;
+
+  color: #db2777;
+
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* =========================================
+   BOTTOM HEART
+========================================= */
+
+.loader-bottom-heart {
+  margin-top: 25px;
+
+  font-size: 18px;
+
+  color: #f43f6f;
+
+  text-shadow:
+    0 0 10px rgba(244, 63, 111, 0.4),
+    0 0 22px rgba(244, 63, 111, 0.18);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .loader-card {
+    width: calc(100% - 32px);
+
+    padding: 38px 24px;
+
+    border-radius: 25px;
+  }
+
+  .loader-icons {
+    gap: 22px;
+  }
+
+  .heart-icon,
+  .gift-icon {
+    font-size: 34px;
+  }
+
+  .loader-stars {
+    gap: 9px;
+
+    margin-bottom: 25px;
+  }
+
+  .loader-star {
+    font-size: 8px;
+  }
+
+  .loader-subtitle {
+    font-size: 0.84rem;
+  }
+
+  .loader-glow {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+  .loader-card {
+    padding: 32px 20px;
+  }
+
+  .loader-card h2 {
+    font-size: 1.45rem;
+  }
+
+  .loader-eyebrow {
+    font-size: 0.62rem;
+  }
+
+  .loader-stars {
+    gap: 7px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .loader-screen *,
+  .loader-screen *::before,
+  .loader-screen *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* ```
+
+### Your final theme
+
+This now uses the same **soft background** you provided:
+
+```css
+background:
+  radial-gradient(
+    circle at 15% 10%,
+    rgba(244, 114, 182, 0.12),
+    transparent 30%
+  ),
+  radial-gradient(
+    circle at 85% 35%,
+    rgba(251, 113, 133, 0.12),
+    transparent 30%
+  ),
+  linear-gradient(
+    135deg,
+    #fffafc 0%,
+    #fff 45%,
+    #fff7fa 100%
+  );
+```
+
+The overall combination is now:
+
+**🤍 White → 🌸 Soft Pink → 💗 Rose → 💕 Deep Pink**
+
+This will look much more consistent with a **premium romantic birthday website** than the dark loader.
+
+I can also create a matching image/mockup of this loader design if you'd like. */

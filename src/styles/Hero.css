@@ -1,0 +1,1437 @@
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 8%;
+
+    background:
+        radial-gradient(circle at 20% 20%,
+            rgba(255, 174, 205, 0.5),
+            transparent 35%),
+        radial-gradient(circle at 80% 30%,
+            rgba(255, 210, 120, 0.4),
+            transparent 30%),
+        linear-gradient(135deg,
+            #ff4f81,
+            #ff7eb3,
+            #9b5de5,
+            #5a189a);
+
+    background-size: 400% 400%;
+
+    animation: gradientMove 12s ease infinite;
+}
+
+/* Background Animation */
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* ================================
+   BACKGROUND GLOW
+================================ */
+
+.hero-gradient-bg {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.15),
+            transparent 60%);
+
+    pointer-events: none;
+}
+
+
+.hero-glow {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: 0.45;
+
+    animation: glowFloat 8s ease-in-out infinite;
+}
+
+
+.glow-1 {
+    background: #ffb703;
+
+    top: 5%;
+    left: -100px;
+}
+
+
+.glow-2 {
+    background: #ff006e;
+
+    bottom: -100px;
+    right: -100px;
+
+    animation-delay: 2s;
+}
+
+
+.glow-3 {
+    background: #8338ec;
+
+    top: 40%;
+    left: 45%;
+
+    animation-delay: 4s;
+}
+
+
+@keyframes glowFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+
+}
+
+
+/* ================================
+   HERO CONTENT
+================================ */
+
+.hero-content {
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 750px;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+/* ================================
+   BADGE
+================================ */
+
+.tag-badge {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: default;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.tag-badge svg {
+    color: #ff1744;
+}
+
+
+/* ================================
+   SMALL TITLE
+================================ */
+
+.hero-small-title {
+    font-size: 16px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+
+    opacity: 0.9;
+}
+
+
+/* ================================
+   MAIN TITLE
+================================ */
+
+.hero-title {
+    font-size: clamp(48px, 7vw, 92px);
+
+    line-height: 1.05;
+
+    margin: 0 0 25px;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.friend-name {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    background:
+        linear-gradient(90deg,
+            #fff,
+            #ffe082,
+            #fff);
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    /* animation: nameShine 3s linear infinite; */
+}
+
+
+@keyframes nameShine {
+
+    to {
+        background-position: 200% center;
+    }
+
+}
+
+
+/* ================================
+   SUBTITLE
+================================ */
+
+.hero-subtitle {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    opacity: 0.95;
+}
+
+
+.hero-subtitle strong {
+    color: #ffe082;
+
+    font-weight: 700;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.primary-btn {
+    margin-top: 35px;
+
+    display: inline-flex;
+
+    align-items: center;
+    gap: 12px;
+
+    border: none;
+
+    padding: 17px 30px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #ff477e;
+
+    background: white;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s ease;
+}
+
+
+.primary-btn svg {
+    font-size: 20px;
+}
+
+
+.primary-btn:hover {
+    background: #fff5f8;
+}
+
+
+/* ================================
+   CAKE
+================================ */
+
+.cake-wrap {
+    position: absolute;
+
+    right: 10%;
+
+    bottom: 12%;
+
+    z-index: 4;
+
+    width: 260px;
+    height: 260px;
+}
+
+
+.cake-glow {
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(255, 255, 255, 0.7),
+            transparent 65%);
+
+    filter: blur(20px);
+
+    z-index: -1;
+}
+
+
+.birthday-cake-hero {
+    position: relative;
+
+    width: 230px;
+
+    height: 190px;
+
+    margin: auto;
+}
+
+
+.cake-layer {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 20px;
+
+    box-shadow:
+        inset 0 -8px rgba(0, 0, 0, 0.08),
+        0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.cake-bottom {
+    width: 220px;
+    height: 60px;
+
+    bottom: 0;
+
+    background: #ff477e;
+}
+
+
+.cake-middle {
+    width: 180px;
+    height: 55px;
+
+    bottom: 55px;
+
+    background: #ff85a1;
+}
+
+
+.cake-top {
+    width: 140px;
+    height: 50px;
+
+    bottom: 105px;
+
+    background: #ffd166;
+}
+
+
+/* Icing */
+
+.cake-icing {
+    position: absolute;
+
+    width: 140px;
+    height: 22px;
+
+    bottom: 142px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50px;
+
+    background: white;
+
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ================================
+   CANDLES
+================================ */
+
+.cake-candles {
+    position: absolute;
+
+    bottom: 160px;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+.candle {
+    position: relative;
+
+    width: 10px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    background:
+        repeating-linear-gradient(45deg,
+            #ffffff,
+            #ffffff 4px,
+            #ff477e 4px,
+            #ff477e 8px);
+}
+
+
+.flame {
+    position: absolute;
+
+    top: -18px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 14px;
+    height: 20px;
+
+    border-radius:
+        50% 50% 50% 50%;
+
+    background:
+        linear-gradient(to top,
+            #ff6b00,
+            #ffd60a,
+            #fff);
+
+    box-shadow:
+        0 0 15px #ffb703;
+}
+
+
+/* Cake dots */
+
+.cake-dots {
+    position: absolute;
+
+    bottom: 25px;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+
+.cake-dots span {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: white;
+}
+
+
+/* ================================
+   BALLOONS
+================================ */
+
+.floating-balloons {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+.balloon {
+    position: absolute;
+
+    width: 55px;
+    height: 70px;
+
+    border-radius:
+        50% 50% 45% 45%;
+
+    box-shadow:
+        inset -8px -10px rgba(0, 0, 0, 0.1);
+}
+
+
+.balloon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+    height: 80px;
+
+    background: rgba(255, 255, 255, 0.5);
+
+    left: 50%;
+
+    top: 68px;
+}
+
+
+.balloon-1 {
+    top: 10%;
+    left: 8%;
+
+    background: #ffd166;
+}
+
+
+.balloon-2 {
+    top: 25%;
+    left: 20%;
+
+    background: #ef476f;
+}
+
+
+.balloon-3 {
+    top: 8%;
+    right: 15%;
+
+    background: #06d6a0;
+}
+
+
+.balloon-4 {
+    top: 45%;
+    right: 5%;
+
+    background: #118ab2;
+}
+
+
+.balloon-5 {
+    bottom: 15%;
+    left: 8%;
+
+    background: #8338ec;
+}
+
+
+.balloon-6 {
+    bottom: 8%;
+    left: 30%;
+
+    background: #ff9f1c;
+}
+
+
+.balloon-7 {
+    top: 50%;
+    left: 5%;
+
+    background: #ff70a6;
+}
+
+
+.balloon-8 {
+    bottom: 25%;
+    right: 20%;
+
+    background: #90e0ef;
+}
+
+
+/* ================================
+   SPARKLES
+================================ */
+
+.sparkles {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+.sparkle {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px white;
+}
+
+
+.sparkle:nth-child(1) {
+    top: 10%;
+    left: 10%;
+}
+
+.sparkle:nth-child(2) {
+    top: 20%;
+    left: 30%;
+}
+
+.sparkle:nth-child(3) {
+    top: 30%;
+    left: 70%;
+}
+
+.sparkle:nth-child(4) {
+    top: 15%;
+    left: 85%;
+}
+
+.sparkle:nth-child(5) {
+    top: 60%;
+    left: 15%;
+}
+
+.sparkle:nth-child(6) {
+    top: 75%;
+    left: 40%;
+}
+
+.sparkle:nth-child(7) {
+    top: 80%;
+    left: 75%;
+}
+
+.sparkle:nth-child(8) {
+    top: 50%;
+    left: 90%;
+}
+
+.sparkle:nth-child(9) {
+    top: 35%;
+    left: 45%;
+}
+
+.sparkle:nth-child(10) {
+    top: 70%;
+    left: 60%;
+}
+
+
+/* Random sparkle positions */
+
+.sparkle:nth-child(n + 11) {
+    top: calc(5% + (var(--random) * 80%));
+}
+
+
+/* ================================
+   CONFETTI
+================================ */
+
+.confetti {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+
+.confetti-piece {
+    position: absolute;
+
+    width: 10px;
+    height: 18px;
+
+    top: -30px;
+
+    left: calc(var(--i, 1) * 4%);
+
+    border-radius: 3px;
+}
+
+
+.confetti-piece:nth-child(4n + 1) {
+    background: #ffd166;
+}
+
+.confetti-piece:nth-child(4n + 2) {
+    background: #ef476f;
+}
+
+.confetti-piece:nth-child(4n + 3) {
+    background: #06d6a0;
+}
+
+.confetti-piece:nth-child(4n + 4) {
+    background: #ffffff;
+}
+
+
+.confetti-piece:nth-child(1) {
+    left: 5%;
+}
+
+.confetti-piece:nth-child(2) {
+    left: 12%;
+}
+
+.confetti-piece:nth-child(3) {
+    left: 20%;
+}
+
+.confetti-piece:nth-child(4) {
+    left: 28%;
+}
+
+.confetti-piece:nth-child(5) {
+    left: 36%;
+}
+
+.confetti-piece:nth-child(6) {
+    left: 44%;
+}
+
+.confetti-piece:nth-child(7) {
+    left: 52%;
+}
+
+.confetti-piece:nth-child(8) {
+    left: 60%;
+}
+
+.confetti-piece:nth-child(9) {
+    left: 68%;
+}
+
+.confetti-piece:nth-child(10) {
+    left: 76%;
+}
+
+.confetti-piece:nth-child(11) {
+    left: 84%;
+}
+
+.confetti-piece:nth-child(12) {
+    left: 92%;
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 8px 15px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    font-family: inherit;
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.scroll-indicator:hover {
+    background: rgba(255, 255, 255, 0.12);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.scroll-text {
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+
+    opacity: 0.9;
+
+    white-space: nowrap;
+}
+
+.scroll-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    backdrop-filter: blur(8px);
+
+    font-size: 14px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+    .scroll-indicator {
+        position: relative;
+
+        bottom: auto;
+        left: auto;
+
+        transform: none;
+
+        margin: 15px auto 0;
+
+        padding: 8px 12px;
+    }
+
+    .scroll-text {
+        font-size: 11px;
+    }
+
+    .scroll-arrow {
+        width: 28px;
+        height: 28px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+    .scroll-indicator {
+        margin-top: 5px;
+    }
+
+    .scroll-text {
+        font-size: 10px;
+
+        letter-spacing: 0.6px;
+    }
+
+    .scroll-arrow {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+
+/* Small screen height */
+@media (max-height: 650px) and (max-width: 768px) {
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+
+    .cake-wrap {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+
+        margin-top: 40px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+
+        padding-top: 120px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        min-height: 100vh;
+
+        padding:
+            100px 20px 120px;
+    }
+
+    .hero-title {
+        font-size: 52px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .cake-wrap {
+        transform: scale(0.8);
+        margin-top: 10px;
+    }
+
+    .balloon {
+        transform: scale(0.7);
+    }
+
+    .balloon-4,
+    .balloon-6,
+    .balloon-8 {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-small-title {
+        font-size: 13px;
+    }
+
+    .primary-btn {
+        padding: 15px 24px;
+        font-size: 14px;
+    }
+
+    .cake-wrap {
+        transform: scale(0.7);
+        margin-top: -20px;
+    }
+
+}
+
+/* ========================================
+   RESPONSIVE - LARGE LAPTOP
+======================================== */
+
+@media (max-width: 1200px) {
+    .hero-section {
+        padding: 100px 6%;
+    }
+
+    .hero-content {
+        max-width: 650px;
+    }
+
+    .cake-wrap {
+        right: 4%;
+        transform: scale(0.9);
+        transform-origin: center;
+    }
+
+    .hero-title {
+        font-size: clamp(50px, 6vw, 78px);
+    }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 992px) {
+    .hero-section {
+        min-height: auto;
+        padding: 100px 30px 80px;
+
+        flex-direction: column;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .cake-wrap {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+
+        width: 230px;
+        height: 220px;
+
+        margin: 35px auto 0;
+
+        transform: scale(0.9);
+    }
+
+    .scroll-indicator {
+        position: relative;
+
+        bottom: auto;
+        left: auto;
+
+        transform: none;
+
+        margin-top: 20px;
+    }
+
+    .balloon-4,
+    .balloon-8 {
+        display: none;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 100svh;
+
+        padding:
+            90px 20px 50px;
+
+        justify-content: flex-start;
+
+        overflow: hidden;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        max-width: 100%;
+
+        z-index: 5;
+    }
+
+    /* Badge */
+
+    .tag-badge {
+        padding: 8px 16px;
+
+        font-size: 13px;
+
+        margin-bottom: 15px;
+    }
+
+    /* Small heading */
+
+    .hero-small-title {
+        font-size: 13px;
+
+        line-height: 1.5;
+
+        margin-bottom: 10px;
+    }
+
+    /* Main heading */
+
+    .hero-title {
+        font-size: clamp(42px, 11vw, 64px);
+
+        line-height: 1.1;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 18px;
+    }
+
+    .friend-name {
+        margin-top: 6px;
+
+        word-break: break-word;
+    }
+
+    /* Subtitle */
+
+    .hero-subtitle {
+        max-width: 100%;
+
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        padding: 0 5px;
+    }
+
+    /* Button */
+
+    .primary-btn {
+        margin-top: 25px;
+
+        padding: 14px 22px;
+
+        font-size: 14px;
+
+        gap: 10px;
+    }
+
+    .primary-btn svg {
+        font-size: 17px;
+    }
+
+    /* Cake */
+
+    .cake-wrap {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+
+        width: 210px;
+        height: 190px;
+
+        margin: 25px auto 0;
+
+        transform: scale(0.78);
+
+        transform-origin: top center;
+    }
+
+    /* Balloons */
+
+    .balloon {
+        width: 40px;
+        height: 55px;
+    }
+
+    .balloon::after {
+        height: 50px;
+
+        top: 53px;
+    }
+
+    .balloon-1 {
+        top: 8%;
+        left: -5%;
+    }
+
+    .balloon-2 {
+        top: 22%;
+        left: 3%;
+    }
+
+    .balloon-3 {
+        top: 10%;
+        right: -3%;
+    }
+
+    .balloon-5 {
+        bottom: 15%;
+        left: -4%;
+    }
+
+    .balloon-7 {
+        display: none;
+    }
+
+    .balloon-4,
+    .balloon-6,
+    .balloon-8 {
+        display: none;
+    }
+
+    /* Glow */
+
+    .hero-glow {
+        width: 200px;
+        height: 200px;
+
+        filter: blur(60px);
+    }
+
+    .glow-3 {
+        display: none;
+    }
+
+    /* Sparkles */
+
+    .sparkles .sparkle:nth-child(n + 16) {
+        display: none;
+    }
+
+    /* Confetti */
+
+    .confetti-piece:nth-child(n + 16) {
+        display: none;
+    }
+
+    /* Scroll */
+
+    .scroll-indicator {
+        margin-top: 10px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+   iPhone SE / Small Android
+======================================== */
+
+@media (max-width: 480px) {
+    .hero-section {
+        min-height: 100svh;
+
+        padding:
+            80px 15px 40px;
+    }
+
+    .tag-badge {
+        font-size: 12px;
+
+        padding: 7px 14px;
+
+        gap: 7px;
+    }
+
+    .hero-small-title {
+        font-size: 12px;
+
+        padding: 0 10px;
+    }
+
+    .hero-title {
+        font-size: clamp(36px, 11vw, 48px);
+
+        line-height: 1.12;
+
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+
+        line-height: 1.55;
+    }
+
+    .primary-btn {
+        margin-top: 22px;
+
+        padding: 13px 20px;
+
+        font-size: 13px;
+    }
+
+    .cake-wrap {
+        width: 190px;
+        height: 165px;
+
+        margin-top: 15px;
+
+        transform: scale(0.65);
+    }
+
+    .balloon {
+        transform: scale(0.75);
+    }
+
+    .balloon-2,
+    .balloon-5 {
+        display: none;
+    }
+
+    .hero-glow {
+        width: 150px;
+        height: 150px;
+    }
+
+    .scroll-indicator {
+        margin-top: 0;
+    }
+}
+
+
+/* ========================================
+   VERY SMALL HEIGHT MOBILE
+======================================== */
+
+@media (max-height: 700px) and (max-width: 768px) {
+
+    .hero-section {
+        padding-top: 60px;
+        padding-bottom: 25px;
+    }
+
+    .hero-title {
+        font-size: 38px;
+
+        margin-bottom: 10px;
+    }
+
+    .hero-small-title {
+        margin-bottom: 5px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+    .primary-btn {
+        margin-top: 15px;
+    }
+
+    .cake-wrap {
+        margin-top: 5px;
+
+        transform: scale(0.6);
+
+        height: 135px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+
+/* ========================================
+   PREVENT HORIZONTAL SCROLL
+======================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.hero-section * {
+    box-sizing: border-box;
+}

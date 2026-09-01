@@ -1,0 +1,589 @@
+/* =========================================
+   BIRTHDAY MESSAGE
+   Romantic Pink + Purple + Rose Gold Theme
+========================================= */
+
+.message-section {
+  position: relative;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(255, 79, 144, 0.20),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 75%,
+      rgba(168, 85, 247, 0.20),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(236, 72, 153, 0.08),
+      transparent 45%
+    );
+}
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.message-bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(70px);
+  opacity: 0.45;
+}
+
+.glow-one {
+  width: 260px;
+  height: 260px;
+  top: 5%;
+  left: -80px;
+  background: rgba(255, 79, 144, 0.30);
+
+  animation: glowMoveOne 8s ease-in-out infinite;
+}
+
+.glow-two {
+  width: 300px;
+  height: 300px;
+  right: -100px;
+  bottom: 5%;
+  background: rgba(168, 85, 247, 0.30);
+
+  animation: glowMoveTwo 10s ease-in-out infinite;
+}
+
+.glow-three {
+  width: 180px;
+  height: 180px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(244, 114, 182, 0.18);
+
+  animation: centerGlow 6s ease-in-out infinite;
+}
+
+@keyframes glowMoveOne {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(100px, 80px) scale(1.25);
+  }
+}
+
+@keyframes glowMoveTwo {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-100px, -70px) scale(1.2);
+  }
+}
+
+@keyframes centerGlow {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.65;
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+}
+
+/* =========================================
+   GLASS CARD
+========================================= */
+
+.message-card {
+  position: relative;
+  z-index: 5;
+
+  width: min(900px, 100%);
+  padding: 70px 70px;
+
+  text-align: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 35px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.045)
+    );
+
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.25),
+    0 0 60px rgba(236, 72, 153, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+  overflow: hidden;
+}
+
+/* Top shine */
+
+.message-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+
+  animation: cardShine 5s ease-in-out infinite;
+}
+
+@keyframes cardShine {
+  0% {
+    left: -100%;
+  }
+
+  50% {
+    left: 130%;
+  }
+
+  100% {
+    left: 130%;
+  }
+}
+
+/* =========================================
+   HEART
+========================================= */
+
+.message-heart-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.message-heart {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  font-size: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff4f90,
+      #ec4899,
+      #a855f7
+    );
+
+  box-shadow:
+    0 12px 35px rgba(236, 72, 153, 0.4),
+    0 0 30px rgba(255, 79, 144, 0.25);
+}
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.message-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: #f9a8d4;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.message-eyebrow svg {
+  font-size: 11px;
+  color: #f5c2e7;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.message-card h2 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  color: #ffffff;
+
+  letter-spacing: -1.5px;
+}
+
+.friend-name {
+  display: inline-block;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ff6fa8,
+      #f9a8d4,
+      #c084fc,
+      #ff6fa8
+    );
+
+  background-size: 300% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: nameGradient 5s linear infinite;
+}
+
+@keyframes nameGradient {
+  to {
+    background-position: 300% center;
+  }
+}
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.message-divider-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin: 28px auto 35px;
+}
+
+.message-divider-1 span {
+  height: 1px;
+  flex: 1;
+
+  max-width: 55px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(249, 168, 212, 0.8)
+    );
+}
+
+.message-divider-1 span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(249, 168, 212, 0.8),
+      transparent
+    );
+}
+
+.message-divider-1 svg {
+  color: #f472b6;
+  font-size: 13px;
+
+  animation: dividerHeart 2s ease-in-out infinite;
+}
+
+@keyframes dividerHeart {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.35);
+  }
+}
+
+/* =========================================
+   MESSAGE TEXT
+========================================= */
+
+.message-lines {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.message-lines p {
+  margin: 0 0 17px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
+
+  line-height: 1.9;
+
+  letter-spacing: 0.15px;
+}
+
+.message-lines p:last-child {
+  margin-top: 25px;
+
+  font-weight: 700;
+
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+
+  background:
+    linear-gradient(
+      90deg,
+      #f9a8d4,
+      #ffffff,
+      #c084fc
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.message-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  margin-top: 42px;
+}
+
+.quote-line {
+  width: 55px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(244, 114, 182, 0.7)
+    );
+}
+
+.quote-line:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(244, 114, 182, 0.7),
+      transparent
+    );
+}
+
+.footer-heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fb7185;
+
+  font-size: 14px;
+
+  filter:
+    drop-shadow(0 0 8px rgba(251, 113, 133, 0.6));
+}
+
+.quote-text {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.78rem;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.floating-hearts,
+.message-sparkles {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+.floating-heart {
+  position: absolute;
+
+  color: rgba(244, 114, 182, 0.55);
+
+  font-size: 18px;
+
+  filter:
+    drop-shadow(
+      0 0 12px rgba(244, 114, 182, 0.35)
+    );
+}
+
+/* =========================================
+   SPARKLES
+========================================= */
+
+.message-sparkle {
+  position: absolute;
+
+  color: rgba(250, 218, 235, 0.75);
+
+  font-size: 10px;
+
+  filter:
+    drop-shadow(
+      0 0 8px rgba(255, 255, 255, 0.5)
+    );
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .message-section {
+    min-height: auto;
+    padding: 75px 16px;
+  }
+
+  .message-card {
+    padding: 50px 25px;
+
+    border-radius: 28px;
+  }
+
+  .message-heart {
+    width: 58px;
+    height: 58px;
+
+    font-size: 23px;
+  }
+
+  .message-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+
+    gap: 7px;
+  }
+
+  .message-card h2 {
+    font-size: 2.4rem;
+  }
+
+  .message-lines p {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .message-footer {
+    margin-top: 32px;
+    gap: 9px;
+  }
+
+  .quote-line {
+    width: 25px;
+  }
+
+  .quote-text {
+    font-size: 0.62rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .message-section {
+    padding: 60px 12px;
+  }
+
+  .message-card {
+    padding: 42px 18px;
+    border-radius: 24px;
+  }
+
+  .message-card h2 {
+    font-size: 2rem;
+  }
+
+  .message-eyebrow span {
+    max-width: 180px;
+    line-height: 1.5;
+  }
+
+  .message-lines p {
+    font-size: 0.92rem;
+  }
+
+  .message-divider-1 {
+    margin: 22px auto 28px;
+  }
+
+  .message-footer {
+    flex-wrap: wrap;
+  }
+
+  .quote-line {
+    display: none;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-one,
+  .glow-two,
+  .glow-three,
+  .message-heart,
+  .message-divider-1 svg,
+  .friend-name,
+  .footer-heart,
+  .message-card::before {
+    animation: none !important;
+  }
+}

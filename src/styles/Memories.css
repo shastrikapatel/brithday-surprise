@@ -1,0 +1,1587 @@
+/* =========================================
+   PREMIUM MEMORY GALLERY
+========================================= */
+
+.memories-section {
+  position: relative;
+  overflow: hidden;
+
+  padding: 120px 0 110px;
+
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(244, 114, 182, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 35%,
+      rgba(251, 113, 133, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #fffafc 0%,
+      #fff 45%,
+      #fff7fa 100%
+    );
+
+  color: #4a1d35;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.memories-container {
+  position: relative;
+  z-index: 3;
+
+  width: min(1180px, calc(100% - 40px));
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   GLOW
+========================================= */
+
+.memory-glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+
+  opacity: 0.35;
+}
+
+.memory-glow-one {
+  top: 5%;
+  left: -230px;
+
+  background: rgba(244, 114, 182, 0.3);
+}
+
+.memory-glow-two {
+  top: 45%;
+  right: -230px;
+
+  background: rgba(251, 113, 133, 0.25);
+}
+
+.memory-glow-three {
+  bottom: -250px;
+  left: 40%;
+
+  background: rgba(236, 72, 153, 0.18);
+}
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.floating-hearts {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.floating-hearts span {
+  position: absolute;
+
+  color: rgba(236, 72, 153, 0.16);
+
+  font-size: 22px;
+
+  animation:
+    memoryFloat
+    9s ease-in-out
+    infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+  left: 7%;
+  top: 8%;
+}
+
+.floating-hearts span:nth-child(2) {
+  left: 18%;
+  top: 28%;
+  animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(3) {
+  left: 4%;
+  top: 53%;
+  animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(4) {
+  left: 14%;
+  top: 76%;
+  animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(5) {
+  right: 7%;
+  top: 12%;
+  animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(6) {
+  right: 17%;
+  top: 30%;
+  animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(7) {
+  right: 5%;
+  top: 54%;
+  animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(8) {
+  right: 13%;
+  top: 80%;
+  animation-delay: 5s;
+}
+
+.floating-hearts span:nth-child(9) {
+  left: 28%;
+  top: 14%;
+  animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(10) {
+  right: 28%;
+  top: 17%;
+  animation-delay: 5s;
+}
+
+.floating-hearts span:nth-child(11) {
+  left: 25%;
+  top: 86%;
+  animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(12) {
+  right: 25%;
+  top: 88%;
+  animation-delay: 2s;
+}
+
+@keyframes memoryFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-25px)
+      rotate(8deg);
+  }
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.memories-hero {
+  text-align: center;
+
+  max-width: 700px;
+
+  margin:
+    0 auto
+    90px;
+}
+
+.camera-badge {
+  width: 70px;
+  height: 70px;
+
+  margin:
+    0 auto
+    25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  color: #db2777;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  border: 1px solid
+    rgba(236, 72, 153, 0.16);
+
+  box-shadow:
+    0 18px 45px
+      rgba(190, 24, 93, 0.12),
+    inset 0 0 0 5px
+      rgba(236, 72, 153, 0.04);
+
+  font-size: 27px;
+}
+
+.memory-eyebrow {
+  margin: 0 0 13px;
+
+  color: #db2777;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.25em;
+}
+
+.memories-hero h2 {
+  margin: 0;
+
+  color: #4a1d35;
+
+  font-size:
+    clamp(42px, 7vw, 76px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+.memories-hero h2 span {
+  color: #db2777;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.memory-intro {
+  max-width: 570px;
+
+  margin:
+    25px auto
+    0;
+
+  color: #8b526c;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.memory-divider {
+  width: 250px;
+
+  margin:
+    27px auto
+    20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.memory-divider span {
+  height: 1px;
+
+  flex: 1;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #f9a8d4
+  );
+}
+
+.memory-divider span:last-child {
+  background: linear-gradient(
+    90deg,
+    #f9a8d4,
+    transparent
+  );
+}
+
+.memory-divider svg {
+  color: #ec4899;
+
+  font-size: 13px;
+}
+
+.memory-count {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding:
+    9px 17px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.8);
+
+  border: 1px solid
+    rgba(236, 72, 153, 0.13);
+
+  color: #be185d;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 25px
+      rgba(190, 24, 93, 0.07);
+}
+
+.memory-count svg:last-child {
+  font-size: 10px;
+}
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.memory-timeline {
+  position: relative;
+
+  padding:
+    30px 0
+    80px;
+}
+
+.memory-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 2px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      #f9a8d4 8%,
+      #f9a8d4 92%,
+      transparent
+    );
+}
+
+/* =========================================
+   TIMELINE ITEM
+========================================= */
+
+.timeline-item {
+  position: relative;
+
+  width: 50%;
+
+  min-height: 500px;
+
+  margin-bottom: 45px;
+}
+
+.timeline-left {
+  padding-right: 75px;
+}
+
+.timeline-right {
+  margin-left: 50%;
+
+  padding-left: 75px;
+}
+
+/* =========================================
+   DOT
+========================================= */
+
+.timeline-dot {
+  position: absolute;
+
+  top: 25px;
+
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  border: 1px solid
+    rgba(236, 72, 153, 0.2);
+
+  box-shadow:
+    0 8px 25px
+      rgba(190, 24, 93, 0.13);
+
+  color: #ec4899;
+
+  font-size: 14px;
+
+  z-index: 5;
+}
+
+.timeline-left .timeline-dot {
+  right: -21px;
+}
+
+.timeline-right .timeline-dot {
+  left: -21px;
+}
+
+/* =========================================
+   DATE
+========================================= */
+
+.timeline-date {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 17px;
+
+  padding:
+    7px 13px;
+
+  color: #be185d;
+
+  background:
+    rgba(255, 255, 255, 0.8);
+
+  border: 1px solid
+    rgba(236, 72, 153, 0.13);
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.timeline-date svg {
+  font-size: 9px;
+
+  color: #f59e0b;
+}
+
+/* =========================================
+   POLAROID
+========================================= */
+
+.polaroid-card {
+  position: relative;
+
+  padding:
+    13px 13px 23px;
+
+  background: #fff;
+
+  box-shadow:
+    0 18px 40px
+      rgba(71, 20, 45, 0.13),
+    0 3px 10px
+      rgba(71, 20, 45, 0.06);
+
+  cursor: pointer;
+
+  transition:
+    box-shadow 0.3s ease;
+
+  border-radius: 2px;
+}
+
+.polaroid-card:hover {
+  box-shadow:
+    0 28px 60px
+      rgba(71, 20, 45, 0.2);
+}
+
+/* =========================================
+   POLAROID ROTATIONS
+========================================= */
+
+.polaroid-0 {
+  transform: rotate(-2.5deg);
+}
+
+.polaroid-1 {
+  transform: rotate(2.5deg);
+}
+
+.polaroid-2 {
+  transform: rotate(-1.5deg);
+}
+
+.polaroid-3 {
+  transform: rotate(2deg);
+}
+
+.polaroid-4 {
+  transform: rotate(-2deg);
+}
+
+.polaroid-5 {
+  transform: rotate(1.5deg);
+}
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.polaroid-photo {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 4.7;
+
+  overflow: hidden;
+
+  background: #fdf2f8;
+}
+
+.polaroid-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.polaroid-card:hover
+  .polaroid-photo
+  img {
+  transform: scale(1.06);
+}
+
+/* =========================================
+   PHOTO SHINE
+========================================= */
+
+.photo-shine {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.18),
+      transparent 40%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.photo-number {
+  position: absolute;
+
+  top: 12px;
+  left: 12px;
+
+  padding:
+    6px 9px;
+
+  border-radius: 999px;
+
+  color: #fff;
+
+  background:
+    rgba(30, 10, 20, 0.45);
+
+  backdrop-filter: blur(8px);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+/* =========================================
+   CAMERA HOVER
+========================================= */
+
+.photo-expand {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 52px;
+  height: 52px;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  background:
+    rgba(236, 72, 153, 0.65);
+
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.polaroid-card:hover
+  .photo-expand {
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+}
+
+/* =========================================
+   CAPTION
+========================================= */
+
+.polaroid-caption {
+  padding:
+    18px 8px 2px;
+
+  text-align: center;
+}
+
+.polaroid-caption h3 {
+  margin: 0;
+
+  color: #4a1d35;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 21px;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.polaroid-caption p {
+  margin:
+    8px auto
+    0;
+
+  max-width: 330px;
+
+  color: #946278;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+.caption-heart {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 12px;
+}
+
+.caption-heart span {
+  width: 25px;
+
+  height: 1px;
+
+  background: #f9a8d4;
+}
+
+.caption-heart svg {
+  color: #ec4899;
+
+  font-size: 10px;
+}
+
+/* =========================================
+   TAPE
+========================================= */
+
+.polaroid-tape {
+  position: absolute;
+
+  top: -10px;
+  left: 50%;
+
+  width: 76px;
+  height: 23px;
+
+  transform:
+    translateX(-50%)
+    rotate(-2deg);
+
+  background:
+    rgba(251, 207, 232, 0.65);
+
+  opacity: 0.7;
+
+  box-shadow:
+    0 2px 5px
+      rgba(100, 30, 60, 0.05);
+}
+
+/* =========================================
+   TIMELINE NOTE
+========================================= */
+
+.timeline-note {
+  position: absolute;
+
+  width: 190px;
+
+  top: 180px;
+
+  color: #a1627b;
+}
+
+.timeline-left .timeline-note {
+  right: -280px;
+
+  text-align: left;
+}
+
+.timeline-right .timeline-note {
+  left: -280px;
+
+  text-align: right;
+}
+
+.timeline-note span {
+  color: #db2777;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+.timeline-note p {
+  margin: 8px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  font-style: italic;
+}
+
+/* =========================================
+   FINAL MESSAGE
+========================================= */
+
+.memories-final {
+  position: relative;
+
+  max-width: 650px;
+
+  margin:
+    20px auto
+    0;
+
+  padding:
+    55px 45px;
+
+  text-align: center;
+
+  background:
+    rgba(255, 255, 255, 0.8);
+
+  border: 1px solid
+    rgba(236, 72, 153, 0.13);
+
+  box-shadow:
+    0 25px 70px
+      rgba(190, 24, 93, 0.09);
+
+  border-radius: 30px;
+
+  backdrop-filter: blur(10px);
+}
+
+.final-heart {
+  width: 62px;
+  height: 62px;
+
+  margin:
+    0 auto
+    20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ec4899,
+      #be185d
+    );
+
+  box-shadow:
+    0 12px 30px
+      rgba(190, 24, 93, 0.2);
+
+  font-size: 22px;
+
+  animation:
+    heartbeat
+    2s ease-in-out
+    infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.final-small {
+  margin: 0 0 10px;
+
+  color: #db2777;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+}
+
+.memories-final h3 {
+  margin: 0;
+
+  color: #4a1d35;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 34px;
+
+  line-height: 1.2;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.memories-final > p:not(.final-small) {
+  max-width: 480px;
+
+  margin:
+    18px auto
+    0;
+
+  color: #946278;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.final-signature {
+  margin-top: 25px;
+
+  color: #946278;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-style: italic;
+
+  font-size: 14px;
+}
+
+.final-signature strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #be185d;
+
+  font-size: 20px;
+}
+
+/* =========================================
+   MODAL
+========================================= */
+
+.memory-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background:
+    rgba(31, 7, 20, 0.94);
+
+  backdrop-filter: blur(18px);
+}
+
+/* =========================================
+   MODAL POLAROID
+========================================= */
+
+.modal-polaroid {
+  width:
+    min(600px, 88vw);
+
+  max-height: 90vh;
+
+  overflow: hidden;
+
+  padding:
+    14px 14px 25px;
+
+  background: #fff;
+
+  box-shadow:
+    0 35px 100px
+      rgba(0, 0, 0, 0.5);
+}
+
+.modal-photo {
+  width: 100%;
+
+  height:
+    min(65vh, 650px);
+
+  background: #18050f;
+}
+
+.modal-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.modal-caption {
+  text-align: center;
+
+  padding:
+    16px 10px 0;
+}
+
+.modal-counter {
+  color: #db2777;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.modal-counter span {
+  color: #f9a8d4;
+}
+
+.modal-caption h3 {
+  margin:
+    7px 0 0;
+
+  color: #4a1d35;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 24px;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.modal-caption p {
+  max-width: 470px;
+
+  margin:
+    7px auto
+    0;
+
+  color: #946278;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+.modal-hearts {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 10px;
+
+  color: #ec4899;
+
+  font-size: 9px;
+}
+
+/* =========================================
+   MODAL CLOSE
+========================================= */
+
+.memory-modal-close {
+  position: fixed;
+
+  top: 22px;
+  right: 25px;
+
+  z-index: 10001;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.25);
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  font-size: 17px;
+
+  backdrop-filter: blur(10px);
+}
+
+.memory-modal-close:hover {
+  background:
+    rgba(236, 72, 153, 0.5);
+
+  transform: rotate(90deg);
+}
+
+/* =========================================
+   MODAL ARROWS
+========================================= */
+
+.memory-modal-arrow {
+  position: fixed;
+
+  top: 50%;
+
+  z-index: 10001;
+
+  width: 52px;
+  height: 52px;
+
+  transform:
+    translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.25);
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.memory-modal-arrow:hover {
+  background:
+    rgba(236, 72, 153, 0.5);
+}
+
+.modal-arrow-left {
+  left: 25px;
+}
+
+.modal-arrow-right {
+  right: 25px;
+}
+
+/* =========================================
+   MODAL HINT
+========================================= */
+
+.modal-hint {
+  position: fixed;
+
+  bottom: 20px;
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    rgba(255, 255, 255, 0.65);
+
+  font-size: 11px;
+}
+
+.modal-hint span {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.2);
+
+  border-radius: 6px;
+
+  background:
+    rgba(255, 255, 255, 0.07);
+}
+
+.modal-hint small {
+  margin-left: 3px;
+}
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.memory-empty {
+  min-height: 400px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.memory-empty > svg {
+  color: #ec4899;
+
+  font-size: 45px;
+
+  margin-bottom: 20px;
+}
+
+.memory-empty p {
+  color: #db2777;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.memory-empty h2 {
+  margin: 0;
+
+  color: #4a1d35;
+
+  font-size: 42px;
+}
+
+.memory-empty span {
+  margin-top: 15px;
+
+  color: #946278;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .timeline-note {
+    display: none;
+  }
+
+  .timeline-left {
+    padding-right: 55px;
+  }
+
+  .timeline-right {
+    padding-left: 55px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .memories-section {
+    padding:
+      80px 0
+      70px;
+  }
+
+  .memories-container {
+    width:
+      calc(100% - 28px);
+  }
+
+  .memories-hero {
+    margin-bottom: 55px;
+  }
+
+  .camera-badge {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 18px;
+
+    font-size: 22px;
+  }
+
+  .memory-eyebrow {
+    font-size: 10px;
+  }
+
+  .memories-hero h2 {
+    font-size:
+      clamp(40px, 12vw, 60px);
+  }
+
+  .memory-intro {
+    font-size: 14px;
+  }
+
+  /* TIMELINE */
+
+  .memory-timeline {
+    padding-left: 0;
+  }
+
+  .memory-timeline::before {
+    left: 12px;
+
+    transform: none;
+  }
+
+  .timeline-item,
+  .timeline-left,
+  .timeline-right {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding-left: 45px;
+    padding-right: 0;
+
+    min-height: auto;
+
+    margin-bottom: 65px;
+  }
+
+  .timeline-dot,
+  .timeline-left .timeline-dot,
+  .timeline-right .timeline-dot {
+    left: -9px;
+    right: auto;
+
+    width: 42px;
+    height: 42px;
+  }
+
+  .timeline-date {
+    font-size: 9px;
+  }
+
+  .polaroid-card {
+    width: 100%;
+  }
+
+  .polaroid-photo {
+    aspect-ratio: 4 / 4.8;
+  }
+
+  .polaroid-caption h3 {
+    font-size: 19px;
+  }
+
+  .polaroid-caption p {
+    font-size: 11px;
+  }
+
+  /* FINAL */
+
+  .memories-final {
+    padding:
+      40px 22px;
+
+    border-radius: 22px;
+  }
+
+  .memories-final h3 {
+    font-size: 28px;
+  }
+
+  /* MODAL */
+
+  .memory-modal {
+    padding: 15px;
+  }
+
+  .modal-polaroid {
+    width: 94vw;
+
+    padding:
+      9px 9px 17px;
+  }
+
+  .modal-photo {
+    height: 65vh;
+  }
+
+  .modal-caption h3 {
+    font-size: 20px;
+  }
+
+  .modal-caption p {
+    font-size: 11px;
+  }
+
+  .memory-modal-close {
+    top: 10px;
+    right: 10px;
+
+    width: 42px;
+    height: 42px;
+  }
+
+  .memory-modal-arrow {
+    top: auto;
+
+    bottom: 20px;
+
+    width: 42px;
+    height: 42px;
+
+    transform: none;
+  }
+
+  .modal-arrow-left {
+    left: 20px;
+  }
+
+  .modal-arrow-right {
+    right: 20px;
+  }
+
+  .modal-hint {
+    display: none;
+  }
+
+  .floating-hearts span:nth-child(n + 7) {
+    display: none;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+  .memories-hero h2 {
+    font-size: 40px;
+  }
+
+  .timeline-item,
+  .timeline-left,
+  .timeline-right {
+    padding-left: 38px;
+  }
+
+  .memory-timeline::before {
+    left: 10px;
+  }
+
+  .timeline-dot,
+  .timeline-left .timeline-dot,
+  .timeline-right .timeline-dot {
+    left: -11px;
+  }
+
+  .polaroid-card {
+    padding:
+      9px 9px 17px;
+  }
+
+  .polaroid-caption {
+    padding-top: 13px;
+  }
+
+  .polaroid-caption h3 {
+    font-size: 17px;
+  }
+
+  .polaroid-caption p {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.polaroid-card:focus-visible,
+.memory-modal-close:focus-visible,
+.memory-modal-arrow:focus-visible {
+  outline:
+    3px solid
+    rgba(236, 72, 153, 0.5);
+
+  outline-offset: 4px;
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-hearts span,
+  .final-heart {
+    animation: none;
+  }
+
+  .polaroid-photo img {
+    transition: none;
+  }
+}
