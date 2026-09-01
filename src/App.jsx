@@ -22,7 +22,7 @@ function App() {
       "/gallery/M-01.jpeg",
       "/gallery/M-02.jpeg",
       "/gallery/M-03.jpeg",
-      "/gallery/M-04.jpeg",
+      "/gallery/M-04.jpeg",     
       "/gallery/M-05.jpeg",
       "/gallery/M-06.jpeg",
       "/gallery/M-07.jpeg",
