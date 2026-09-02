@@ -9,6 +9,7 @@ import BirthdayMessage from './components/BirthdayMessage';
 import SurpriseGift from './components/SurpriseGift';
 import BirthdayCake from './components/BirthdayCake';
 import FinalSection from './components/FinalSection';
+import FunnyVideo from "./components/FunnyVideo";
 import Footer from './components/Footer';
 
 const friendName = 'Archi';
@@ -76,6 +77,7 @@ function App() {
           <AgeCountdown friendName={friendName} />
           <Memories friendName={friendName} images={memories} />
           {/* <TimelineSection items={timelineData} /> */}
+          <FunnyVideo friendName={friendName} />
           <SpecialReasons items={reasons} />
           <BirthdayMessage friendName={friendName} />
           <SurpriseGift friendName={friendName} />

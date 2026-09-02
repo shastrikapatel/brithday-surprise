@@ -1,0 +1,534 @@
+.funny-video-section {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 20px;
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(255, 79, 144, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(168, 85, 247, 0.2),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #fff5f8,
+      #f9f5ff,
+      #fff
+    );
+}
+
+/* Decorative Blobs */
+
+.funny-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.blob-one {
+  width: 350px;
+  height: 350px;
+  background: #ff6fae;
+  top: -100px;
+  left: -100px;
+}
+
+.blob-two {
+  width: 400px;
+  height: 400px;
+  background: #a855f7;
+  bottom: -150px;
+  right: -100px;
+}
+
+/* Container */
+
+.funny-video-container {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading */
+
+.funny-video-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.funny-icon {
+  width: 75px;
+  height: 75px;
+  margin: auto;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 25px;
+
+  font-size: 32px;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #ff4f90,
+    #a855f7
+  );
+
+  box-shadow:
+    0 15px 40px rgba(255, 79, 144, 0.35);
+
+  transform: rotate(-8deg);
+}
+
+.funny-eyebrow {
+  color: #ff4f90;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.funny-video-heading h2 {
+  font-size: clamp(32px, 5vw, 55px);
+  line-height: 1.1;
+  margin-bottom: 18px;
+
+  color: #2b1b33;
+}
+
+.funny-video-heading p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6d6473;
+}
+
+/* Video Card */
+
+.video-card {
+  max-width: 850px;
+  margin: auto;
+
+  border-radius: 30px;
+  overflow: hidden;
+
+  background: white;
+
+  box-shadow:
+    0 25px 80px rgba(79, 34, 96, 0.18);
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Thumbnail */
+
+.video-thumbnail {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.video-card:hover .video-thumbnail img {
+  transform: scale(1.08);
+}
+
+/* Overlay */
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(25, 10, 30, 0.7),
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.2)
+    );
+}
+
+/* Badge */
+
+.video-badge {
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  padding: 10px 18px;
+
+  border-radius: 50px;
+
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+
+  backdrop-filter: blur(15px);
+
+  background: rgba(255, 255, 255, 0.2);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Play Button */
+
+.play-button {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-left: 7px;
+
+  font-size: 32px;
+
+  cursor: pointer;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff4f90,
+      #a855f7
+    );
+
+  box-shadow:
+    0 15px 50px rgba(255, 79, 144, 0.6);
+
+  transition: 0.3s ease;
+}
+
+.play-button:hover {
+  box-shadow:
+    0 20px 70px rgba(168, 85, 247, 0.6);
+}
+
+/* Bottom Video Text */
+
+.video-bottom-text {
+  position: absolute;
+
+  bottom: 25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  padding: 10px 20px;
+
+  border-radius: 50px;
+
+  backdrop-filter: blur(10px);
+
+  background: rgba(0, 0, 0, 0.3);
+
+  white-space: nowrap;
+}
+
+/* Footer */
+
+.video-card-footer {
+  padding: 22px 28px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #4b3b50;
+
+  font-weight: 700;
+}
+
+.funny-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.funny-dots span {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #ff4f90;
+}
+
+.funny-dots span:nth-child(2) {
+  background: #a855f7;
+}
+
+.funny-dots span:nth-child(3) {
+  background: #ffd166;
+}
+
+/* Funny Message */
+
+.funny-message {
+  max-width: 650px;
+
+  margin: 45px auto 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  text-align: center;
+
+  padding: 25px 30px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.funny-message span {
+  font-size: 30px;
+}
+
+.funny-message p {
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: #5d5260;
+
+  font-style: italic;
+}
+
+/* ========================= */
+/* VIDEO MODAL */
+/* ========================= */
+
+.video-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 8, 20, 0.85);
+
+  backdrop-filter: blur(10px);
+}
+
+.video-modal-content {
+  position: relative;
+
+  width: 100%;
+  max-width: 950px;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  background: #111;
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.7);
+}
+
+/* Close Button */
+
+.close-video {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  z-index: 10;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 18px;
+
+  transition: 0.3s;
+}
+
+.close-video:hover {
+  transform: rotate(90deg);
+
+  background: #ff4f90;
+}
+
+/* Modal Title */
+
+.modal-title {
+  padding: 18px;
+
+  text-align: center;
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff4f90,
+      #a855f7
+    );
+}
+
+/* Video */
+
+.funny-video-player {
+  width: 100%;
+
+  display: block;
+
+  max-height: 70vh;
+
+  background: black;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .funny-video-section {
+    padding: 80px 15px;
+  }
+
+  .video-thumbnail {
+    height: 350px;
+  }
+
+  .play-button {
+    width: 80px;
+    height: 80px;
+
+    font-size: 25px;
+  }
+
+  .video-card-footer {
+    padding: 18px;
+
+    font-size: 14px;
+  }
+
+  .funny-message {
+    padding: 20px;
+
+    gap: 10px;
+  }
+
+  .funny-message span {
+    font-size: 22px;
+  }
+
+  .funny-message p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .video-thumbnail {
+    height: 280px;
+  }
+
+  .video-badge {
+    top: 15px;
+    left: 15px;
+
+    font-size: 12px;
+
+    padding: 8px 12px;
+  }
+
+  .video-bottom-text {
+    bottom: 15px;
+
+    font-size: 12px;
+
+    padding: 8px 12px;
+  }
+
+  .funny-icon {
+    width: 60px;
+    height: 60px;
+
+    font-size: 25px;
+  }
+
+  .funny-video-heading h2 {
+    font-size: 32px;
+  }
+}
